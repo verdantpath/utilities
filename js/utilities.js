@@ -16,6 +16,6 @@ function removeEvent(el, event, callback) {
   } else {
     el.detachEvent('on' + event, el[event + callback]);
     el[event + callback] = null;
-    el['e' + event + callback] = null;
+    el['e' + event + callback] = null; 
   }
 }
