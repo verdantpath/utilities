@@ -9,3 +9,11 @@ function addEvent (el, event, callback) {
     el.attachEvent('on' + event, el[event + callback]);
   }
 }
+
+function removeEvent(el, event, callback) {
+  if ('removeEventListener' in el) {
+    el.removeEventListener(event, callback, false);
+  } else {
+    
+  }
+}
