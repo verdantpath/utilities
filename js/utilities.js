@@ -10,12 +10,12 @@ function addEvent (el, event, callback) {
   }
 }
 
-function removeEvent(el, event, callback) {
+function removeEvent(el, event, callback) { 
   if ('removeEventListener' in el) {
     el.removeEventListener(event, callback, false);
   } else {
     el.detachEvent('on' + event, el[event + callback]);
     el[event + callback] = null;
-    el['e' + event + callback] = null; 
+    el['e' + event + callback] = null;
   }
 }
